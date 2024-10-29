@@ -39,11 +39,15 @@ jobs:
             #     docker build -t $DOCKER_IMAGE .
             #     docker login -u farrasyakila -p $DOCKER_TOKEN
             #     docker push $DOCKER_IMAGE
+            - id: 'auth'
+              uses: 'google-github-actions/auth@v2'
+              with:
+                credentials_json: '${{ secrets.JSON_KEY_GCP }}'
 
             - name: Set up GKE credentials
               uses: google-github-actions/get-gke-credentials@v2
               with:
-                cluster_name: ${{ secrets.JSON_KEY_GCP }}
+                cluster_name: '${{ secrets.JSON_KEY_GCP }}'
                 location: "asia-southeast2"
 
             - name: Deploy to GKE
