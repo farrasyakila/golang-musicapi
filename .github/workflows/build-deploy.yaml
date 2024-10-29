@@ -44,11 +44,14 @@ jobs:
 
             - name: Deploy to GKE
               env:
-                GOOGLE_PROJECT: "learn-with-farra"
+                JSON_KEY_GCP: ${{ secrets.JSON_KEY_GCP }}
               run: |
                 set -x
-                cd deployment/
+                echo "$JSON_KEY_GCP" | base64 --decode > ${HOME}/key.json
+                gcloud auth active-service-account --key-file=${HOME}/key.jsons
+                export USE_GKE_GCLOUD_AUTH_PLUGIN=true
                 gcloud container clusters get-credentials default --region asia-southeast2
+                cd deployment/
                 kubectl version
                 # sed -i "s|farrasyakila/music-app-1|${DOCKER_IMAGE}|" musicapi-deployment.yaml
                 ls
