@@ -19,19 +19,9 @@ jobs:
             - name: Checkout
               uses: actions/checkout@v3
 
-            - uses: google-github-actions/setup-gcloud@1bee7de035d65ec5da40a31f8589e240eba8fde5
-              with:
-                service_account_key: ${{ secrets.JSON_KEY_GCP }}
-                project_id: "learn-with-farra"
 
-            - uses: google-github-actions/get-gke-credentials@db150f2cc60d1716e61922b832eae71d2a45938f
-              with:
-                cluster_name: "default"
-                location: "asia-southeast2"
-                credentials: ${{ secrets.JSON_KEY_GCP }}
-
-            # - name: Setup gcloud
-            #   uses: google-github-actions/setup-gcloud@v1
+            - name: Setup gcloud
+              uses: google-github-actions/setup-gcloud@v1
 
             # - name: gcloud login
             #   run: gcloud auth login --cred-file=key.json
@@ -50,6 +40,12 @@ jobs:
             #     docker login -u farrasyakila -p $DOCKER_TOKEN
             #     docker push $DOCKER_IMAGE
 
+            - name: Set up GKE credentials
+              uses: google-github-actions/get-gke-credentials@v0
+              with:
+                cluster_name: ${{ secrets.JSON_KEY_GCP }}
+                location: "asia-southeast2"
+                
             - name: Deploy to GKE
               run: |
                 gcloud auth login --cred-file=key.json
