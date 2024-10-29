@@ -1,0 +1,42 @@
+name: "[MUSIC-API][STAGING] Deployment"
+
+on:
+    push :
+        branches:
+        - main
+
+env: 
+    DOCKER_REGISTRY: asia-southeast2-docker.pkg.dev/learn-with-farra/docker-images/music-app-1
+
+jobs:
+    build-and-push:
+        name: MUSIC-API 
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v3
+
+            - name: Setup gcloud
+              uses: google-github-actions/setup-gcloud@v1
+
+            - name: gcloud login
+              run: gcloud auth activate-service-account github-action@learn-with-farra.iam.gserviceaccount.com --key-file=key.json --project=learn-with-farra
+              
+            - name: Get git SHA
+              run: |
+                TAG=$(git rev-parse --short HEAD)
+                echo "TAG=$TAG" >> $GITHUB_ENV
+
+            - name: Build & Push
+              run: |
+                DOCKER_IMAGE="DOCKER_REGISTRY:$TAG" >> $GITHUB_ENV
+                cd code/
+                docker build -t $DOCKER_IMAGE .
+                gcloud auth configure-docker asia-southeast2-docker.pkg.dev
+                docker push $DOCKER_IMAGE
+
+            - name: Deploy to GKE
+              run: |
+                cd deployment/
+                ls
