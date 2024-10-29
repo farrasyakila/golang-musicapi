@@ -42,7 +42,7 @@ jobs:
               run: |
                 set -x
                 echo "$JSON_KEY_GCP" | base64 --decode > ${HOME}/key.json
-                gcloud auth active-service-account --key-file=${HOME}/key.json
+                gcloud auth activate-service-account --key-file=${HOME}/key.json
                 export USE_GKE_GCLOUD_AUTH_PLUGIN=true
                 gcloud container clusters get-credentials default --region asia-southeast2
                 cd deployment/
