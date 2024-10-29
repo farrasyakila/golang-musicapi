@@ -1,0 +1,53 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: musicapi
+  namespace: ns-musicapi
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: musicapi
+  template:
+    metadata:
+      labels:
+        app: musicapi
+    spec:
+      containers:
+      - name:  musicapi
+        image: farrasyakila/music-app-1
+        env:
+          - name: CONFIG_DBPASS
+            valueFrom:
+              secretKeyRef:
+                key: rootpassword
+                name: mysql-password
+          - name: CONFIG_DBNAME
+            valueFrom:
+              configMapKeyRef:
+                key: dbname
+                name: musicapi
+          - name: CONFIG_DBUSER
+            valueFrom:
+              configMapKeyRef:
+                key: dbuser
+                name: musicapi
+          - name: CONFIG_SERVER_PORT
+            valueFrom:
+              configMapKeyRef:
+                key: serverport
+                name: musicapi
+          - name: CONFIG_DBHOST
+            valueFrom:
+              configMapKeyRef:
+                key: dbhost
+                name: musicapi
+        resources:
+          limits:
+            cpu: "0.4"
+            memory: 500Mi
+          requests:
+            cpu: "0.1"
+            memory: 150Mi
+        ports:
+        - containerPort: 8081
