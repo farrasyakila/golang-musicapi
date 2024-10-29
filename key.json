@@ -1,14 +1,13 @@
 {
-    "type": "service_account",
-    "project_id": "learn-with-farra",
-    "private_key_id": "00825ffc8a61de7c0c36bfbbd0aadc2089f76a22",
-    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDWIY8+96D0G3sg\n63RrEfvIdSyWa7LFamhbzadbrINdiC6C8sawEOQ0Lemg/TM0exFz9sBKj34UkRn3\ncIQH+C2LKnmUjELhQQRbbgAI2DfYwLqv0JpruImsuDNYpQZpbt7nc9oJjNFleYsU\nuCCzv2vhgGJmQNPK1nDMaju1R32ZAOhL6WLmU/POGKnit60P07veBZW8lxyHYrlG\nk0OvXDTiIMXLXVjz8jBU1IMtieMqrfUeDEyhPb1K8ivmbkZr53rt4vw+I1Tti8df\nsBlYTwpojuyOthjfHvm/o5p05rVISXt4FOGvX+CR6izcAss3SPkrX5Qjn5WK8sMA\nGWHAylstAgMBAAECggEADwXvvOU2v6ml69tZIaHzXk8KP8tykXMzuy0kjsP9u3Qw\nfzN1SSkGObr25zqcexQfV1l6iEClAeBkR/325XA+EcN7IDbvAkrDeX6wNe6ljGmJ\nL4idLO2XiyypPZDmcEM9FFQGeiENF+d9IIkCklndwcZ2IOJveY2uAEl7wu4vG6rZ\nwbjtFIYk16hkic7Ms+fyXnMxWqnnxJvKKOvo62U38M8bEQtj/7xSUIfXsHHyVlHO\niIXE6sehQTUq+99FFl1E1OvqnSkfTMDvNZ46LzO9xmeEIjtPuau7MCOAeZexm4QW\nNw2pKP3zn6uXZQvuESnXL7f9DlAIl0bo0m1sTa/ogQKBgQDyjMmULO21Ve7nJpVC\nv7TeSJ+Uvi+TUTNHjUOo1U5ZvhDjOA4clooMnt3TtP+GaX3pWSLtIYxy0Uyfazbm\n5MJEAzvIKgeo0mq1ibUewbZ4gwlu4lovV1RYnzqdAKzyLILIZf95lD0HcTWXV28a\nbaZP2R/eTcKLjgGmjxvlRPqyHQKBgQDiAVdT7sfTBmc3a+LN7zUe7PI1Oeh1XLzu\nSbtKt2ptWHNw/LwxKrkzljgmC6hiTrWCrPQ0mPBtDyt+1p9vP7+YHfHyboqN0y6o\nIZ7KLnw7XgtrF2ZhvJpdp3FOrjsklg77f3Bet01ZwuD0Wttze5UOkMOCQya0SOmI\nmhDSKdgAUQKBgQCLAwexJgLjMCopTuKzC96km2jivhHUU/CY7Ky/gelS4+0X3ROx\nbNIYI6EtagodRi7E47JxyA2P7McGg1NHCAsTIetMcFJNfrNr8k3dH9btwORSKebY\nRSvxUukr/KwibEJUiqjeTIih0E+PuqvRsNBl6SIrrdN3Wl81z8WEJIGuPQKBgBtr\nTDv7mTSp7zXTGfYgElLJLm10tBYhBS7ntRhQflH7zC2mC/LvGv7+N5uuCGS85dqP\nvyTudSTWFVHTGg62Ljl3UJY4AQlJ2Lw/L/OZhirxsvLwKNSsvBGmseF40+YRaonq\noShslq7QLNiYeU1ebewRdhbErNpsiiCviGDnALSxAoGBAL/YmnM9wDHg3dqWdLmU\nGWtzQyuqOVwAuG9bV0FApG64moEcJ6/Z9oGPOOh+xknkCHSwMG1VJbSBmeOngDnj\nRGWqzO9LLi9v/iSOnZpISEk8HccZSq/Y2em47cw2CEDonJwh7ui0DHFDhPMTs9HK\nReMblKJI5cxcF6aGNJdQuOug\n-----END PRIVATE KEY-----\n",
-    "client_email": "github-action@learn-with-farra.iam.gserviceaccount.com",
-    "client_id": "103728953450421414718",
-    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-    "token_uri": "https://oauth2.googleapis.com/token",
-    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/github-action%40learn-with-farra.iam.gserviceaccount.com",
-    "universe_domain": "googleapis.com"
-  }
-  
+  "type": "service_account",
+  "project_id": "learn-with-farra",
+  "private_key_id": "caec469e22283d5e15dddbcd55a5942566d2732b",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC+vd4k5DEq3q3E\nex+NzqcnO/jD/GFeRe2isGK/sYBzIskXsfwTmULiUOf0Tnme0Pfs6W7BRco3aqrb\nzNMhqTT4lHzYiW0VFCLaHycFvkGCtlHACdQQgktV0qCDDjrW9YqlZPbGrs7ZIBJb\nOeJWz1U9Vt7Ph5fKPZaffIU+D1Yk5qXMhNMO3z9qJlz0FeRXtesA4FlBVwjv9D/6\nLVXUkPwDTKK8l4tmF5tSFaAuBZ5RJ9HXm8vMXPoSa4n3waheEwU6LvvCqVCzsdHA\n4BeYPiBBgY++RlaK72dwX+bLtAB15chYNMb4A4s8MrLMyIWsnhvFeszrMgljm+c7\nCjKC5JEbAgMBAAECggEADXiSWk+la04rvo8lhNnd80bohErsQ4CzzkQfzUMHe9ou\nkpZW47l0wFAPebEbJMzEXb6EvHCl3fESHRDjrmJpY8703EQkaJMx/O6rTlwH+2fN\n8T6gdAQHtwl3nZnhLPJNdu3hAdoxsKLzuO6nHhNphTn/5W9BmJ5t51iffmkN3/As\ntulcW36cpZeP+UMqxfqKaDOh9gaeFccLZTH1YXR35+gsXHmvT0bRlZ1ieD+OtkwC\ng8sSYMzT1CCujNxKCGejRqlYss79nj+uLTa3ACjCnJyC/HiUPQonyqUl1ESGsR31\nMcTF5drmrSgXk30a9fvVWZ+JHgcVWPm8scemWla7FQKBgQD7hlNWX4hxEW/0Qthy\nz09pDWzYNACPNiz7glgVy2UL0zhOgbmcv5QWYOKwtzEQfyrFM11Xj9DpFNil3sQm\nnEQElR+1KRYe47e3QfrKK7mPW4FB8c0aJ6kTi8Xy5w60CSf5muucja2L0tTq55H5\nj6O7QMXnKTs1mO6EH9pgpeXc3QKBgQDCIq4x8S/OFhu7eQKXmveQJvEvmaBAkbMR\n5ucOPAJok2kvxdRZEWt+uTo7SUD2eVCo/BkqfQbRlKaulVW7PZTx+KAjm6qRIAVc\n9LYAPxgk+BSf7y06o5PvruYywc8IIyTU+hKfDlb2wKE+3JMjYTazgz9L0+28XWig\nxn0pqu9qVwKBgBSypA76g47SYYUXLxqbhqxdZ3SPKvCeA6uauUbp2uHTOtHzCOQm\nO7hvtpfWK1pxLILXzDmVYxqbFYzovPl0aIB8CQTuYZyfHpIdAtc6K+XpIMTdcgRR\n+S7blKl9bA9SpZB7uCHE4uAbtFu0PKXttQqGtQJluTKa6B3FRUIoxLadAoGBAMHc\n6gEbbfap4zW6KNmGOfPsv2seSYZROPYGk/OF/424rxCyyFPNboAUrk7n3wSCrwah\nAOyJ/9YoUK8El6EsZOGhuyDz4UedJ13lTR4/43d/ePEhYhQtp5xxFpXXLkxc8/nu\nY8wMANHWGO9yS0jIWly3Eu1BDCXPTZ1HuVNzzDNvAoGANn+jQ0S1aTwmIJhfdGZu\nwb0L0JQyVHdlDzcd6ZBBji6qbrnUwlpY6b55nUDccglX36ctWF43RyKKv2DAuG+7\nv+UbFlB3SXg+5KqaJNAI5Yj8VCIettpR4ulGDitwhZd2nklHvK4Q5xXZRWlR7YGz\n7SbiUm+fy9khJRYRr7gQSFU=\n-----END PRIVATE KEY-----\n",
+  "client_email": "github-action@learn-with-farra.iam.gserviceaccount.com",
+  "client_id": "103728953450421414718",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/github-action%40learn-with-farra.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
