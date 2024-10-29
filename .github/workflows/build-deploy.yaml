@@ -41,6 +41,7 @@ jobs:
                 JSON_KEY_GCP: ${{ secrets.JSON_KEY_GCP }}
               run: |
                 set -x
+                DOCKER_IMAGE="$DOCKER_REGISTRY:$TAG" >> $GITHUB_ENV
                 echo "$JSON_KEY_GCP" | base64 --decode > ${HOME}/key.json
                 gcloud auth activate-service-account --key-file=${HOME}/key.json
                 export USE_GKE_GCLOUD_AUTH_PLUGIN=true
