@@ -44,7 +44,7 @@ jobs:
                 echo "$JSON_KEY_GCP" | base64 --decode > ${HOME}/key.json
                 gcloud auth activate-service-account --key-file=${HOME}/key.json
                 export USE_GKE_GCLOUD_AUTH_PLUGIN=true
-                gcloud container clusters get-credentials default --region asia-southeast2
+                gcloud container clusters get-credentials default --region asia-southeast2 --project learn-with-farra
                 cd deployment/
                 kubectl version
                 # sed -i "s|farrasyakila/music-app-1|${DOCKER_IMAGE}|" musicapi-deployment.yaml
