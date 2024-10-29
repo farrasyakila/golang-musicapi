@@ -19,14 +19,8 @@ jobs:
             - name: Checkout
               uses: actions/checkout@v3
 
-
-            - name: install the gcloud cli
+            - name: Install the gcloud cli
               uses: google-github-actions/setup-gcloud@v2
-              with:
-                project_id: "learn-with-farra"
-                service_account_key: ${{ secrets.JSON_KEY_GCP }}
-                install_components: 'gke-gcloud-auth-plugin'
-                export_default_credentials: true
 
             - name: Get git SHA
               run: |
@@ -48,7 +42,7 @@ jobs:
               run: |
                 set -x
                 echo "$JSON_KEY_GCP" | base64 --decode > ${HOME}/key.json
-                gcloud auth active-service-account --key-file=${HOME}/key.jsons
+                gcloud auth active-service-account --key-file=${HOME}/key.json
                 export USE_GKE_GCLOUD_AUTH_PLUGIN=true
                 gcloud container clusters get-credentials default --region asia-southeast2
                 cd deployment/
