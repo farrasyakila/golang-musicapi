@@ -20,11 +20,13 @@ jobs:
               uses: actions/checkout@v3
 
 
-            - name: Setup gcloud
-              uses: google-github-actions/setup-gcloud@v1
-
-            # - name: gcloud login
-            #   run: gcloud auth login --cred-file=key.json
+            - name: install the gcloud cli
+              uses: google-github-actions/setup-gcloud@v0
+              with:
+                project_id: "learn-with-farra"
+                service_account_key: ${{ secrets.JSON_KEY_GCP }}
+                install_components: 'gke-gcloud-auth-plugin'
+                export_default_credentials: true
 
             - name: Get git SHA
               run: |
@@ -39,15 +41,6 @@ jobs:
             #     docker build -t $DOCKER_IMAGE .
             #     docker login -u farrasyakila -p $DOCKER_TOKEN
             #     docker push $DOCKER_IMAGE
-            - id: 'auth'
-              uses: 'google-github-actions/auth@v2'
-              with:
-                credentials_json: '${{ secrets.JSON_KEY_GCP }}'
-
-            - name: Set up GKE credentials
-              uses: google-github-actions/get-gke-credentials@v2
-              with:
-                cluster_name: 'projects/learn-with-farra/locations/asia-southeast2/clusters/default'
 
             - name: Deploy to GKE
               run: |
