@@ -21,7 +21,7 @@ jobs:
               uses: google-github-actions/setup-gcloud@v1
 
             - name: gcloud login
-              run: gcloud auth activate-service-account github-action@learn-with-farra.iam.gserviceaccount.com --key-file=key.json --project=learn-with-farra
+              run: gcloud auth activate-service-account --key-file=key.json
               
             - name: Get git SHA
               run: |
