@@ -48,5 +48,5 @@ jobs:
                 gcloud container clusters get-credentials default --region asia-southeast2 --project learn-with-farra
                 cd deployment/
                 kubectl version
-                # sed -i "s|farrasyakila/music-app-1|${DOCKER_IMAGE}|" musicapi-deployment.yaml
+                sed -i "s|farrasyakila/music-app-1|${DOCKER_IMAGE}|" musicapi-deployment.yaml
                 ls
