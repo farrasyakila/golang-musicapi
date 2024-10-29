@@ -41,6 +41,7 @@ jobs:
             - name: Deploy to GKE
               run: |
                 gcloud auth login --cred-file=key.json
+                gcloud config set project learn-with-farra
                 cd deployment/
                 kubectl version
                 gcloud container clusters get-credentials default --region asia-southeast2 --project learn-with-farra
