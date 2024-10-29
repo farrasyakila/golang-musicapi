@@ -47,8 +47,7 @@ jobs:
             - name: Set up GKE credentials
               uses: google-github-actions/get-gke-credentials@v2
               with:
-                cluster_name: 'default'
-                location: 'asia-southeast2-a'
+                cluster_name: 'projects/learn-with-farra/locations/asia-southeast2/clusters/default'
 
             - name: Deploy to GKE
               run: |
