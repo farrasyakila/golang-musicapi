@@ -40,8 +40,8 @@ jobs:
 
             - name: Deploy to GKE
               run: |
-                cd deployment/
                 gcloud auth login --cred-file=key.json
+                cd deployment/
                 kubectl version
                 gcloud container clusters get-credentials default --region asia-southeast2 --project learn-with-farra
                 # sed -i "s|farrasyakila/music-app-1|${DOCKER_IMAGE}|" musicapi-deployment.yaml
