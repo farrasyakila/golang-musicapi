@@ -22,12 +22,12 @@ jobs:
             - uses: google-github-actions/setup-gcloud@1bee7de035d65ec5da40a31f8589e240eba8fde5
               with:
                 service_account_key: ${{ secrets.JSON_KEY_GCP }}
-                project_id: learn-with-farra
+                project_id: "learn-with-farra"
 
             - uses: google-github-actions/get-gke-credentials@db150f2cc60d1716e61922b832eae71d2a45938f
               with:
-                cluster_name: default
-                location: asia-southeast2
+                cluster_name: "default"
+                location: "asia-southeast2"
                 credentials: ${{ secrets.JSON_KEY_GCP }}
 
             # - name: Setup gcloud
