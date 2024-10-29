@@ -47,7 +47,7 @@ jobs:
             - name: Set up GKE credentials
               uses: google-github-actions/get-gke-credentials@v2
               with:
-                cluster_name: ${{ secrets.JSON_KEY_GCP }}
+                cluster_name: "default"
                 location: "asia-southeast2"
 
             - name: Deploy to GKE
