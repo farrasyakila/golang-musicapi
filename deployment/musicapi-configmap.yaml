@@ -5,6 +5,6 @@ metadata:
   namespace: ns-musicapi
 data:
   dbname: evergreen_music_db
-  dbuser: farra
+  dbuser: root
   serverport: "8081"
-  dbhost: "10.20.0.7" #mysql-api.ns-musicapi.svc.cluster.local:3306
+  dbhost: mysql-api.ns-musicapi.svc.cluster.local:3306
